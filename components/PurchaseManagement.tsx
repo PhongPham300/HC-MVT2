@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Farmer, PurchaseRecord, QualityType } from '../types';
 import { Plus, Search, FileDown, TrendingUp, Calendar, Trash2 } from 'lucide-react';
-import { utils, writeFile } from 'xlsx';
+import * as XLSX from 'xlsx';
 
 interface PurchaseManagementProps {
   purchases: PurchaseRecord[];
@@ -55,10 +55,10 @@ const PurchaseManagement: React.FC<PurchaseManagementProps> = ({ purchases, farm
             'Ghi Chú': p.note
         };
     });
-    const ws = utils.json_to_sheet(data);
-    const wb = utils.book_new();
-    utils.book_append_sheet(wb, ws, "Thu Mua");
-    writeFile(wb, "HoaCuong_ThuMua.xlsx");
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Thu Mua");
+    XLSX.writeFile(wb, "HoaCuong_ThuMua.xlsx");
   };
 
   const filteredPurchases = purchases.filter(p => {

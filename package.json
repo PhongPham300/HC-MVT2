@@ -1,7 +1,7 @@
 {
-  "name": "hoa-cương-agrimanager",
+  "name": "hoa-cuong-agri-manager",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,14 +12,16 @@
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "lucide-react": "^0.556.0",
-    "@google/genai": "^1.32.0",
+    "@google/genai": "^1.31.0",
     "recharts": "^3.5.1",
-    "xlsx": "latest"
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.8.2",
     "vite": "^6.2.0"
   }
 }
